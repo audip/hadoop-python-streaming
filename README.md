@@ -14,3 +14,8 @@
 
 ## TODO
 - Upgrade to use newer syntax in run mapreduce command
+
+## References
+- https://github.com/sequenceiq/hadoop-docker
+- http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/
+ 
