@@ -8,9 +8,11 @@
 ## Setup
 - Copy files to $HADOOP_PREFIX from host to inside container: `docker cp <filename> <container-id>:<$HADOOP_PREFIX>`
 - Download streaming jar for hadoop: `curl -O http://central.maven.org/maven2/org/apache/hadoop/hadoop-streaming/2.7.3/hadoop-streaming-2.7.3.jar`
+- Put input folder with files on hdfs: `$HADOOP_PREFIX/bin/hdfs dfs -put input`
+- **Note**: Ensure output folder is deleted using `$HADOOP_PREFIX/bin/hdfs dfs -rm -r output`
 
 ## Run MapReduce
-- Command: `bin/hadoop jar hadoop-streaming-2.6.0.jar -file /mapper.py -mapper /mapper.py -file /reducer.py -reducer /reducer.py -input input/ -output output`
+- Command: `bin/hadoop jar hadoop-streaming-2.7.3.jar -file /mapper.py -mapper /mapper.py -file /reducer.py -reducer /reducer.py -input input/ -output output`
 
 ## TODO
 - Upgrade to use newer syntax in run mapreduce command
